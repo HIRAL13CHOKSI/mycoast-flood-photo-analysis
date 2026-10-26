@@ -40,6 +40,16 @@ flowchart TD
     I --> J
 ```
 
+## Study area and example output
+
+![Broader MyCoast observation coverage in southeastern Connecticut](assets/mycoast_study_area.jpg)
+
+*Study-area map from the research report. The heat pattern shows broader MyCoast observation coverage; the final analysis uses a selected set of 18 photographs.*
+
+![Original MyCoast photograph alongside the image-processing result](assets/photo_analysis_example.jpg)
+
+*Original photograph and example image-processing output from the research report, showing detected objects and a water mask.*
+
 ## Skills demonstrated
 
 **Computer vision:** image segmentation, object detection, and waterline analysis  
