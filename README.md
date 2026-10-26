@@ -1,53 +1,56 @@
-# Photo-Based Coastal Flood Analysis
+# MyCoast | Photo-Based Coastal Flood Analysis
 
-**Research by Hiral Choksi | Graduate Research Assistant, CIRCA | Advisor: Dr. Yaprak Onat**
+**Python · Computer vision · Geospatial data · Uncertainty analysis · Gradio**
 
-## Overview
+I developed a research workflow and interactive prototype that explore how community flood photographs can help screen local flood depth. The system combines image analysis with project metadata, potential reference objects, field-survey context, and water-level information.
 
-Community photographs can provide a local view of coastal flooding where tide stations alone cannot describe conditions at a particular street. I developed a research workflow and interactive prototype that explore how flood photos, computer vision, field-survey context, and water-level information can support flood-depth screening.
+**Role:** Graduate Research Assistant, Connecticut Institute for Resilience and Climate Adaptation (CIRCA)  
+**Research and implementation:** Hiral Choksi  
+**Advisor:** Dr. Yaprak Onat
 
-I independently developed the research analysis and photo-analysis application during my graduate research assistantship at the Connecticut Institute for Resilience and Climate Adaptation (CIRCA), under the guidance of Dr. Yaprak Onat.
+## Why this matters
 
-## Workflow
-
-![Photo analysis workflow from the project presentation](assets/flood_workflow.jpg)
-
-*Workflow excerpt from the project presentation. Depth estimates depend on available physical evidence and review.*
-
-```mermaid
-flowchart TD
-    A["MyCoast flood photograph"] --> B["Match photograph to project context"]
-    B --> C["Identify visible water and waterline"]
-    B --> D["Identify possible reference objects"]
-    C --> E["Evaluate reference evidence"]
-    D --> E
-    F["Survey, terrain, and NOAA context when available"] --> E
-    E --> G{"Is physical evidence sufficient?"}
-    G -->|"Yes"| H["Estimate depth with stated basis and uncertainty"]
-    G -->|"No"| I["Report that a depth estimate is unavailable"]
-    H --> J["Review annotated image and results"]
-    I --> J
-```
+Flooding can vary from one street to another. A community photograph provides a local view that can complement tide-station information. Turning that image into a meaningful measurement requires careful interpretation of the waterline, reference objects, and physical context.
 
 ## What I built
 
-- A workflow for matching photos with project metadata and environmental context.
-- Computer-vision analysis to identify visible water, waterlines, and potential reference objects.
-- An evidence-dependent depth screening approach that communicates uncertainty and withholds unsupported estimates.
-- An interactive research prototype for analyzing individual photographs and reviewing outputs.
+- **Photo-analysis workflow:** match a photograph to project metadata and available environmental context.
+- **Computer-vision pipeline:** identify visible water, extract waterlines, and detect potential physical reference objects.
+- **Evidence-dependent estimation:** assess whether the physical basis supports a screening estimate and communicate uncertainty.
+- **Interactive prototype:** analyze individual project photographs and review annotated outputs through a Gradio interface.
 
-## Tools and skills
+## Workflow
 
-Python · computer vision · image segmentation · object detection · geospatial data · uncertainty analysis · Gradio · data visualization
+![Excerpt of the photo-based flood analysis workflow from the project presentation](assets/flood_workflow.jpg)
 
-## Demonstration
+*Workflow excerpt from my project presentation. The prototype evaluates whether the physical evidence supports an estimate; it can report that a quantitative depth is unavailable.*
 
-A video demonstration is planned for this showcase. The video will be linked after its contents and hosting are reviewed.
+```mermaid
+flowchart TD
+    A["Flood photograph"] --> B["Match project context"]
+    B --> C["Identify water and waterline"]
+    B --> D["Identify reference objects"]
+    C --> E["Evaluate physical evidence"]
+    D --> E
+    F["Survey and water-level context"] --> E
+    E --> G{"Sufficient evidence?"}
+    G -->|"Yes"| H["Estimate with stated uncertainty"]
+    G -->|"No"| I["Report estimate unavailable"]
+    H --> J["Review annotated results"]
+    I --> J
+```
 
-## Project status
+## Skills demonstrated
 
-This is a research prototype for screening and exploration. Estimates depend on the evidence available in each image and are not intended for emergency or life-safety decisions. Research code, detailed methods, data, and unpublished findings are private. Contact Hiral to discuss the project.
+**Computer vision:** image segmentation, object detection, and waterline analysis  
+**Geospatial and environmental data:** photograph metadata, survey information, terrain context, and NOAA water levels  
+**Applied research:** uncertainty, quality review, and communicating limitations  
+**Application development:** an interactive Python/Gradio research interface
 
-## Acknowledgments
+## Demonstration and research status
 
-Project advisor: Dr. Yaprak Onat. Supported by Connecticut Sea Grant, CIRCA, and CT NERR.
+A video demonstration is planned. This application is a research and screening prototype, and estimates depend on the evidence available in each image. It is not an emergency-warning or life-safety system.
+
+The research code, data, detailed methods, and unpublished findings are not included in this public showcase.
+
+**Acknowledgment:** Work completed at CIRCA under the guidance of Dr. Yaprak Onat, with support from Connecticut Sea Grant, CIRCA, and CT NERR.
