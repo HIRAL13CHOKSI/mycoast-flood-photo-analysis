@@ -49,7 +49,9 @@ flowchart TD
 
 ## Demonstration and research status
 
-A video demonstration is planned. This application is a research and screening prototype, and estimates depend on the evidence available in each image. It is not an emergency-warning or life-safety system.
+[Download the 77-second application demonstration](MyCoast_Flood_Photo_Demo.webm) (WebM, 7.7 MB) to see a photograph analyzed, the water mask and detected objects, and an example screening estimate. GitHub may require you to download the video to play it.
+
+The displayed depth is an approximate screening estimate. This application is a research prototype, and estimates depend on the evidence available in each image. It is not an emergency-warning or life-safety system.
 
 The research code, data, detailed methods, and unpublished findings are not included in this public showcase.
 
