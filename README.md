@@ -10,6 +10,10 @@ I independently developed the research analysis and photo-analysis application d
 
 ## Workflow
 
+![Photo analysis workflow from the project presentation](assets/flood_workflow.jpg)
+
+*Workflow excerpt from the project presentation. Depth estimates depend on available physical evidence and review.*
+
 ```mermaid
 flowchart TD
     A["MyCoast flood photograph"] --> B["Match photograph to project context"]
